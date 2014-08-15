@@ -1,0 +1,33 @@
+
+
+<!-- <nav class="navbar navbar-default" role="navigation">
+ -->  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      
+      <div class ="brand">
+      <a class="navbar-brand" style="color: black;" >DoodFood</a>
+    </div>
+  </div>
+
+        
+      
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_user %>
+          <li class="Featured"><a href="<%= mains_path %>" class="navstyle">Featured</a></li>
+          <li class="Ingredients"><a href="<%= ingredients_path %>" class="navstyle">Ingredients</a></li>
+          <li class ="Recipes"><a href="<%= recipes_path %>" class="navstyle">Recipes</a></li>
+          <li class="Logout">
+         <%= link_to "Logout", session_path, method: :delete, class: "navstyle" %>
+          </li>
+          <% else %>
+        <li class ="login"><a href="http://localhost:3000/session/new" class="navstyle">Login</a></li>
+        <li class="dropdown">
+          <a href="<%= new_user_path %>" class="navstyle">Sign Up </a>
+          <% end %>
+          
+        </li>
+      </ul>
+    </div>
+</nav>
+

@@ -1,0 +1,55 @@
+<h1> Ingredients Page </h1>
+
+
+
+<div class="ingredients" ng-controller="foodCtrl">
+  <div class="checkboxes row col-md-6">
+  <% @ingredients.each do |ingredient| %>
+    <input type="checkbox" ng-model="ingredient[]" ng-change="getRecipes()" /> <%= ingredient.name %><br/>
+  <% end %>
+</div>
+
+
+  <ul class="col-md-6 pull-right">
+    <% @recipes.each do |r| %>
+    
+      <strong><%= r.name %> </strong> <%= r.cooktime %>
+        <div class="recipes"> 
+        <div class="col-md-4"><%= link_to (image_tag r.image.url, width: "150"), recipe_path(r) %></div>
+      </div>
+
+     <!--  <%= link_to "Click for recipe info", recipe_path(r) %> -->
+    </li>
+  <% end %>
+</ul>
+</div>
+<!-- 
+<div class="ingredients">
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+</div>
+
+
+<div class="ingredients">
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+</div>
+
+
+<div class="ingredients">
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+  <div class="col-md-2">.col-md-2</div>
+</div>
+ -->

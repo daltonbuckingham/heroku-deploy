@@ -1,0 +1,38 @@
+<h1> Recipes </h1>
+<%= link_to "Add a Recipe", new_recipe_path %>
+
+<ul>
+  <% @recipes.each do |r| %>
+  
+    <strong><%= r.name %> </strong> <%= r.cooktime %>
+      <div class="recipes"> 
+      <div class="col-md-4"><%= link_to (image_tag r.image.url, width: "150"), recipe_path(r) %></div>
+    </div>
+
+   <!--  <%= link_to "Click for recipe info", recipe_path(r) %> -->
+  </li>
+  <% end %>
+</ul>
+<!-- 
+
+<div class="recipes">
+  <div class="col-md-4"><%= image_tag ("/assets/Bacon_Wrapped_Jalapeno_Poppers.jpg") %></div>
+  <div class="col-md-4"><%= image_tag ("/assets/Blue_Cheese_Burger.jpg") %></div>
+  <div class="col-md-4"><%= image_tag ("/assets/Buffalo_Chicken_Nachos.jpg") %></div>
+</div>
+
+<br>
+
+<div class="recipes">
+  <div class="col-md-4"><%= image_tag ("/assets/Chicken_Fried_Rice.jpg") %></div>
+  <div class="col-md-4"><%= image_tag ("/assets/Honey_Lime_Tequila_Shrimp_Tacos.jpg") %></div>
+  <div class="col-md-4"><%= image_tag ("/assets/Pastrami_Wrapped_Hot_Dog.jpg") %></div>
+</div>
+
+<br>
+
+<div class="recipes">
+  <div class="col-md-4"><%= image_tag ("/assets/Food.jpg") %></div>
+  <div class="col-md-4"><%= image_tag ("/assets/Food.jpg") %></div>
+  <div class="col-md-4"><%= image_tag ("/assets/Food.jpg") %></div>
+</div> -->

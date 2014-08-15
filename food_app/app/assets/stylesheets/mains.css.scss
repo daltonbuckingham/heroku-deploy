@@ -1,0 +1,33 @@
+// Place all the styles related to the mains controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#pictures {
+	margin: 0 auto;
+	position: absolute;
+	left: 500px;
+	top: 400px;
+}
+
+.picturebox {
+  width: 150px;
+  height: 150px;
+  border: 5px solid black;
+  display: inline-block;
+  /*padding-top: 5px;*/
+  }
+  .picturebox2 {
+  width: 150px;
+  height: 150px;
+  border: 5px solid black;
+  display: inline-block;
+  }
+
+  h1 {
+  	text-align: center;
+  }
+
+  #box1 {
+    padding-bottom: 5px;
+
+    }

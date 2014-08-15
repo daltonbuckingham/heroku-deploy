@@ -1,0 +1,6 @@
+<%= form_for @recipe do |f| %>
+	<%= f.text_field :name, placeholder: "name" %>
+	<%= f.file_field :image %> <%= f.submit "Upload" %> 
+<% end %>
+
+<%= link_to "Delete this Recipe", recipe_path, method: :delete %>

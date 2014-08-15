@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="food">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular.js"></script>
+
+
+  <title>FoodApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div ng-view>
+
+	<%= render 'partials/nav' %>
+	<div class="container">
+	
+<%= yield %>
+
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
